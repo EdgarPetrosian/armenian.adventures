@@ -3,63 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Booking</title>
+    <title>Tour Booking - Armenian Adventures</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #004080;
+            color: white;
+            padding: 15px 0;
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tour-image {
+            width: 100%;
+            border-radius: 10px;
         }
         form {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
         }
         input, select, button {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         button {
             background-color: #28a745;
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
         button:hover {
             background-color: #218838;
         }
+        .tour-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .tour-card {
+            width: 48%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            text-align: center;
+        }
+        .tour-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .tour-card h3 {
+            margin: 10px 0;
+            color: #004080;
+        }
     </style>
 </head>
 <body>
-    <h2>Tour Booking Form</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+    <header>Armenian Adventures - Tour Booking</header>
+    <div class="container">
+        <h2 style="text-align:center;">Choose Your Tour</h2>
+        <div class="tour-options">
+            <div class="tour-card">
+                <img src="https://via.placeholder.com/400x200" alt="Yerevan City Tour">
+                <h3>Yerevan City Tour</h3>
+            </div>
+            <div class="tour-card">
+                <img src="https://via.placeholder.com/400x200" alt="Garni & Geghard">
+                <h3>Garni & Geghard Tour</h3>
+            </div>
+            <div class="tour-card">
+                <img src="https://via.placeholder.com/400x200" alt="Tatev Monastery">
+                <h3>Tatev Monastery Tour</h3>
+            </div>
+        </div>
         
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-        
-        <label for="tour">Select Tour Package:</label>
-        <select id="tour" name="tour">
-            <option value="yerevan-city-tour">Yerevan City Tour</option>
-            <option value="garni-geghard">Garni & Geghard Tour</option>
-            <option value="tatev-monastery">Tatev Monastery Tour</option>
-        </select>
-        
-        <label for="date">Tour Date:</label>
-        <input type="date" id="date" name="date" required>
-        
-        <button type="submit">Book Now</button>
-    </form>
+        <h2 style="text-align:center;">Book Your Tour</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="tour">Select Tour Package:</label>
+            <select id="tour" name="tour">
+                <option value="yerevan-city-tour">Yerevan City Tour</option>
+                <option value="garni-geghard">Garni & Geghard Tour</option>
+                <option value="tatev-monastery">Tatev Monastery Tour</option>
+            </select>
+            
+            <label for="date">Tour Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
 </body>
 </html>
