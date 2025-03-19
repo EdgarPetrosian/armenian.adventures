@@ -27,40 +27,12 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .tour-image {
-            width: 100%;
-            border-radius: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, select, button {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .tour-options, .destination-options {
+        .tour-options {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .tour-card, .destination-card {
+        .tour-card {
             width: 48%;
             background: white;
             border-radius: 10px;
@@ -69,13 +41,38 @@
             padding: 15px;
             text-align: center;
         }
-        .tour-card img, .destination-card img {
+        .tour-card img {
             width: 100%;
             border-radius: 10px;
         }
-        .tour-card h3, .destination-card h3 {
+        .tour-card h3 {
             margin: 10px 0;
             color: #004080;
+        }
+        .list--inline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 0;
+        }
+        .list__link {
+            background-color: #f8f8f8;
+            border-radius: 9px;
+            border: 1px solid #F8F8F8;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+        }
+        .list__link:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -95,62 +92,6 @@
             <div class="tour-card">
                 <img src="https://via.placeholder.com/400x200" alt="Tatev Monastery">
                 <h3>Tatev Monastery Tour</h3>
-            </div>
-        </div>
-        
-        <h2 style="text-align:center;">Top Destinations</h2>
-        <div class="destination-options">
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Amberd Fortress">
-                <h3>Amberd Fortress</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Dilijan">
-                <h3>Dilijan</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Echmiadzin Mother Cathedral">
-                <h3>Echmiadzin Mother Cathedral</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Garni Temple">
-                <h3>Garni Temple</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Geghard Monastery">
-                <h3>Geghard Monastery</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Gyumri">
-                <h3>Gyumri</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Haghpat Monastery">
-                <h3>Haghpat Monastery</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Jermuk">
-                <h3>Jermuk</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Khor Virap Monastery">
-                <h3>Khor Virap Monastery</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Lake Sevan">
-                <h3>Lake Sevan</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Noravank Monastery">
-                <h3>Noravank Monastery</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Tsaghkadzor">
-                <h3>Tsaghkadzor</h3>
-            </div>
-            <div class="destination-card">
-                <img src="https://via.placeholder.com/400x200" alt="Zvartnots Temple">
-                <h3>Zvartnots Temple</h3>
             </div>
         </div>
         
@@ -177,6 +118,25 @@
             
             <button type="submit">Book Now</button>
         </form>
+    </div>
+    
+    <div class="container">
+        <h2 style="text-align:center;">Top Destinations</h2>
+        <div class="list--inline">
+            <a href="#" class="list__link">Amberd Fortress</a>
+            <a href="#" class="list__link">Dilijan</a>
+            <a href="#" class="list__link">Echmiadzin Mother Cathedral</a>
+            <a href="#" class="list__link">Garni Temple</a>
+            <a href="#" class="list__link">Geghard Monastery</a>
+            <a href="#" class="list__link">Gyumri</a>
+            <a href="#" class="list__link">Haghpat Monastery</a>
+            <a href="#" class="list__link">Jermuk</a>
+            <a href="#" class="list__link">Khor Virap Monastery</a>
+            <a href="#" class="list__link">Lake Sevan</a>
+            <a href="#" class="list__link">Noravank Monastery</a>
+            <a href="#" class="list__link">Tsaghkadzor</a>
+            <a href="#" class="list__link">Zvartnots Temple</a>
+        </div>
     </div>
 </body>
 </html>
